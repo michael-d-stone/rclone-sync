@@ -1,0 +1,10 @@
+[Unit]
+Description=Perform an rclone sync periodically.
+Requires=rclone-sync.service
+
+[Timer]
+OnCalendar=07:00
+RandomizedDelaySec=60
+
+[Install]
+WantedBy=timers.target

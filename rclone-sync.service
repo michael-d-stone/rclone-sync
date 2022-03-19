@@ -1,0 +1,7 @@
+[Unit]
+Description=Sync files using rclone
+
+[Service]
+Type=oneshot
+User=root
+ExecStart=/root/backup/rclone_borg_sync.sh
