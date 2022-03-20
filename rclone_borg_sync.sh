@@ -1,6 +1,7 @@
 #!/bin/bash
 set -e
 repos=( lb pihole proxmox proxmox-b proxmox-c home )
+bwlimit=1024k
 
 #Bail if rclone is already running, maybe previous run didn't finish
 if pidof -x rclone >/dev/null; then
