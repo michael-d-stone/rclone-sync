@@ -2,7 +2,6 @@
 set -e
 repos=( rpool/ROOT/pve-1 backup/proxmox-backup-server tank/file-cabinet tank/keepsake tank/keepsake2 tank/mikesclassicads tank/pbs tank/personal tank/testing tank/timemachine )
 bwlimit=1024k
-/backup/borg/backup/proxmox-backup-server/
 
 #Bail if rclone is already running, maybe previous run didn't finish
 if pidof -x rclone >/dev/null; then
