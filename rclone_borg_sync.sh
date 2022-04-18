@@ -28,11 +28,3 @@ do
     fi
 
 done
-
-#echo "==================== syncing RESTIC backups"
-#restic_repos=( default monitoring )
-#for i in "${restic_repos[@]}"
-#do
-#  echo "==================== syncing $i"
-#  /usr/bin/rclone --config /root/.config/rclone/rclone.conf -v sync /tank/data/minio/velero/restic/$i b2-restic:/billimek-restic/restic/$i
-#done
