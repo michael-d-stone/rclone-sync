@@ -2,7 +2,7 @@
 set -e
 date=$(date '+%Y-%m-%d-%H_%M_%S')
 
-repos=("rpool/ROOT/pve-1" "backup/proxmox-backup-server" "tank/file-cabinet" "tank/keepsake" "tank/keepsake2" "tank/mikesclassicads" "tank/pbs" "tank/personal" "tank/testing" "tank/timemachine")
+repos=("rpool/ROOT/pve-1" "backup/proxmox-backup-server" "tank/file-cabinet" "tank/keepsake" "tank/keepsake2" "tank/mikesclassicads" "tank/personal" "tank/timemachine")
 
 bwlimit=1024k
 
