@@ -2,9 +2,9 @@
 set -e
 date=$(date '+%Y-%m-%d-%H_%M_%S')
 
-repos=("rpool/ROOT/pve-1" "backup/proxmox-backup-server" "tank/file-cabinet" "tank/keepsake" "tank/keepsake2" "tank/mikesclassicads" "tank/personal" "tank/timemachine")
+repos=("rpool/ROOT/pve-1" "backup/proxmox-backup-server" "tank/file_cabinet" "tank/keepsake" "tank/keepsake2" "tank/mikesclassicads" "tank/personal" "tank/timemachine")
 
-bwlimit=1024k
+bwlimit=500k
 
 logfile=/var/log/rclone-$date.log
 
@@ -24,7 +24,7 @@ do
        echo "not enough space used in $i ($space) - skipping!"
     else
        echo "==================== syncing $i"
-       /usr/bin/rclone --config /home/mike/.config/rclone/rclone.conf -vvv sync /backup/borg/$i b2:mds-borgbackup/$i 2>&1 | sudo tee $logfile
+    sudo /usr/bin/rclone --config /home/mike/.config/rclone/rclone.conf -vvv sync /backup/borg/$i b2:mds-borgbackup/$i 2>&1 | sudo tee $logfile
     fi
 
 done
