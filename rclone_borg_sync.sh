@@ -24,7 +24,7 @@ do
        echo "not enough space used in $i ($space) - skipping!"
     else
        echo "==================== syncing $i"
-    sudo /usr/bin/rclone --config /home/mike/.config/rclone/rclone.conf --bwlimit=$bwlimit -vvv sync /backup/borg/$i b2:mds-borgbackup/$i 2>&1 | sudo tee $logfile
+    sudo /usr/bin/rclone --config /home/mike/.config/rclone/rclone.conf --delete-during --bwlimit=$bwlimit -vvv sync /backup/borg/$i b2:mds-borgbackup/$i 2>&1 | sudo tee $logfile
     fi
 
 done
